@@ -1,0 +1,17 @@
+[user]
+	name = Ivan Vasilev
+	email = 20002mc@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+[push]
+  default = current
+[color]
+  ui = auto
+[text]
+	editor = nvim
+[url "git@gitlab.opt.kyt:"]
+insteadOf = https://gitlab.opt.kyt/
+[remote "origin"]
+	prune = true
