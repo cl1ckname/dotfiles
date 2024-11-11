@@ -15,6 +15,8 @@ alias minecraft='java -jar /home/clickname/Downloads/TLauncher-2.876.jar'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias iccat='kitten icat'
 
+alias dcu='docker compose up -d'
+
 starship init fish | source
 enable_transience
 
