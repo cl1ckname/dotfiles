@@ -4,16 +4,17 @@ end
 
 set -U fish_greeting
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='eza -l --icons --no-permissions --no-user -h -o'
+alias la='eza -a'
+alias ls='eza'
+alias tree='eza -T --level=5'
 
 alias pong='ping 8.8.8.8'
 alias down='shutdown now'
-alias ll='ls -la'
 alias minecraft='java -jar /home/clickname/Downloads/TLauncher-2.876.jar'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias iccat='kitten icat'
+alias refish='source ~/dotfiles/fish/config.fish'
 
 alias dcu='docker compose up -d'
 
