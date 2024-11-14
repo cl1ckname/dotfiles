@@ -27,4 +27,5 @@ fish_add_path ~/.config/yarn/global/node_modules/.bin
 fish_add_path ~/.local/bin
 
 set -gx EDITOR (type -p nvim)
+set -gx GOBIN ~/go/bin
 set -gx NVM_DIR ~/.config/nvm
