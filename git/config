@@ -24,6 +24,8 @@ insteadOf = https://gitlab.opt.kyt/
 	psf = push -f
 	cob = checkout -b
 	del = branch -D
+	com = commit
+	comm = commit -m
 	amend = commit --amend --no-edit
 	last  = log -1
 	l = log --pretty=format:'%C(auto)%h %C(red)%as %C(blue)%aN%C(auto)%d%C(green) %s' 
