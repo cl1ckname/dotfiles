@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+bind \cg accept-autosuggestion
 set -U fish_greeting
 
 alias ll='eza -l --icons --no-permissions --no-user -h -o'
