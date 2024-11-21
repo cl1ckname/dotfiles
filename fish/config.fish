@@ -5,6 +5,7 @@ end
 bind \cg accept-autosuggestion
 set -U fish_greeting
 
+alias cd..='cd ..'
 alias ll='eza -l --icons --no-permissions --no-user -h -o'
 alias la='eza -a'
 alias ls='eza'
@@ -31,3 +32,13 @@ fish_add_path ~/.local/bin
 set -gx EDITOR (type -p nvim)
 set -gx GOBIN ~/go/bin
 set -gx NVM_DIR ~/.config/nvm
+
+# For yazi integration
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
