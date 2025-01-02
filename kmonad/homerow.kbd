@@ -1,6 +1,7 @@
 (defcfg
   input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
   output (uinput-sink "My KMonad output")
+  fallthrough true
 )
 
 
@@ -35,15 +36,15 @@
   tab  q    w    e    r    t    y    u    i    o    p    [     ]        ret
   caps @met_a   @alt_s   @ctl_d   @sft_f   g   h   @sft_j   @ctl_k   @alt_l   @met_;    '     \
   lsft 102d z    x    c    v    b    n    m    ,    .    /              rsft
-  lalt fn lmet @sym           spc            ralt cmps rctl      back up   fwd
+  lalt fn lmet @sym           spc            @sym cmps rctl      back up   fwd
                                                                    left down rght
 )
 
 (deflayer syms
   _  _  _   _   _   _   _   _   _   _   _  _   _ _ _  _
   del  _  _   _   _    _    _    _    _    _    _    _     _      _
-  bspc  :  ;   \(   \)    _    _    _    _    _    _    _     _        _
-  _  ,  .   {   }    _    left    down    up    right    _    _     _
+  bspc  :  =   \(   \)    _    _    _    $    '    "    _     _        _
+  _  %  !   {   }    _    left    down    up    right    "    _     _
   _  '  _   _   [    ]    _    _    _    _    _    _              _
   _  _  _   _           _           _    _    _      _ _   _
                                                                    _ _ _
