@@ -17,6 +17,9 @@ alias minecraft='java -jar /home/clickname/Downloads/TLauncher-2.876.jar'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias iccat='kitten icat'
 alias refish='source ~/dotfiles/fish/config.fish'
+alias rewall='killall swaybg && ~/dotfiles/scripts/background.sh'
+alias kssh='kitten ssh'
+alias nv='nvim'
 
 alias dcu='docker compose up -d'
 
@@ -42,3 +45,9 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+
+# >>> coursier install directory >>>
+set -gx PATH "$PATH:/home/clickname/.local/share/coursier/bin"
+# <<< coursier install directory <<<
+
+cdf shell fish | source
