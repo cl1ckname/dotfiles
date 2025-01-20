@@ -100,6 +100,10 @@
   margin-right: 10px;
 }
 
+#language {
+	min-width: 8em;
+}
+
 /* =============================== */
 /* Launcher Module */
 #custom-launcher {
@@ -114,76 +118,37 @@
 #workspaces {
   padding-left: 8px;
   padding-right: 8px;
+  color: @lavender;
 }
 
-#workspaces * {
-  font-size: 0px;
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 #workspaces button {
-  background-color: @surface3;
-  color: @mauve;
-  border-radius: 100%;
-  min-height: 12px;
-  min-width: 12px;
-  margin: 5px 6px;
-  padding: 0px;
-  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
-  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
-  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+  padding: 0 5px;
+  background-color: transparent;
+  color: @green;
+  font-size: 12px;
 }
 
-#workspaces button.active {
-  /*color: @surface0;
-    border-radius: 1rem;
-    padding: 0rem 10px;*/
-  background: radial-gradient(circle, rgba(203, 166, 247, 1) 0%, rgba(193, 168, 247, 1) 12%, rgba(249, 226, 175, 1) 19%, rgba(189, 169, 247, 1) 20%, rgba(182, 171, 247, 1) 24%, rgba(198, 255, 194, 1) 36%, rgba(177, 172, 247, 1) 37%, rgba(170, 173, 248, 1) 48%, rgba(255, 255, 255, 1) 52%, rgba(166, 174, 248, 1) 52%, rgba(160, 175, 248, 1) 59%, rgba(148, 226, 213, 1) 66%, rgba(155, 176, 248, 1) 67%, rgba(152, 177, 248, 1) 68%, rgba(205, 214, 244, 1) 77%, rgba(148, 178, 249, 1) 78%, rgba(144, 179, 250, 1) 82%, rgba(180, 190, 254, 1) 83%, rgba(141, 179, 250, 1) 90%, rgba(137, 180, 250, 1) 100%);
-  background-size: 400% 400%;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
 
 #workspaces button:hover {
-  background-color: @mauve;
+  background: rgba(0, 0, 0, 0.2);
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 30%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+#workspaces button.focused {
+  background-color: @lavender;
+  box-shadow: inset 0 -3px #ffffff;
 }
 
-@keyframes gradient_f {
-  0% {
-    background-position: 0% 200%;
-  }
-
-  50% {
-    background-position: 200% 0%;
-  }
-
-  100% {
-    background-position: 400% 200%;
-  }
+#workspaces button.urgent {
+  background-color: #eb4d4b;
 }
 
-@keyframes gradient_f_nh {
-  0% {
-    background-position: 0% 200%;
-  }
-
-  100% {
-    background-position: 200% 200%;
-  }
-}
 
 /* =============================== */
 
@@ -194,6 +159,7 @@
 #memory,
 #temperature {
   color: @blue;
+  min-width: 4em;
 }
 
 #cpu {
@@ -201,13 +167,15 @@
   border-bottom-right-radius: 0;
   margin-right: 0px;
   padding-right: 5px;
+  padding-left: 5px;
 }
 
 #memory {
-  border-radius: 0px;
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  /*padding-left: 5px;*/
+  /*margin-right: 0px;*/
+  /*padding-right: 5px;*/
 }
 
 #temperature {

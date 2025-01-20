@@ -50,12 +50,14 @@
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
     "hyprland/workspaces": {
-        // "format": "{icon} {name}",
-        "format": "",
+        "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": ""
+			"active": " ",
         },
+		"persistent-workspaces": {
+			"*": 4, // 5 workspaces by default on every monitor
+		},
+		"sort-by-number": true,
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "on-click": "activate"
