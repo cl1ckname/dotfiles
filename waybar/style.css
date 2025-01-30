@@ -87,6 +87,8 @@
 #custom-cycle_wall,
 #custom-clipboard,
 #custom-ss,
+#custom-tomato,
+#custom-pomodoro,
 #custom-weather {
   background-color: @surface0;
   color: @text;
@@ -336,6 +338,11 @@ window#waybar {
     background: @red;
     color: @surface1;
   }
+}
+
+#custom-tomato {
+	color: @red;
+	
 }
 
 /* =============================== */

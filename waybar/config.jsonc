@@ -19,7 +19,7 @@
         // "memory",
         // "temperature",
         // "disk",
-        "custom/updates"
+		"custom/tomato"
     ],
     "modules-center": [
         "clock",
@@ -35,8 +35,7 @@
         // "custom/cycle_wall",
         //"custom/clipboard",
 		"hyprland/language",
-        "custom/power",
-        "custom/music"
+        "custom/power"
         // "custom/custom"
     ],
     "custom/launcher": {
@@ -121,6 +120,22 @@
         "on-click-right": "amberol",
         "max-length": 35
     },
+	"custom/tomato": {
+		"format": "{}",
+		"exec": "tomato -t",
+		"interval": 1,
+		"tooltip": false,
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'tomato'",
+	}, 
+	"custom/pomodoro": {
+   		"exec": "i3-gnome-pomodoro status --format=waybar --show-seconds",
+     	"return-type": "json",
+     	"interval": 1,
+     	"format": "Pomodoro {}",
+     	"on-click": "i3-gnome-pomodoro start",
+     	"on-click-middle": "i3-gnome-pomodoro toggle",
+     	"on-click-right": "i3-gnome-pomodoro stop",
+ },
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true,
