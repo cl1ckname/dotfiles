@@ -89,6 +89,7 @@
 #custom-ss,
 #custom-tomato,
 #custom-pomodoro,
+#custom-playerctl,
 #custom-weather {
   background-color: @surface0;
   color: @text;
@@ -310,8 +311,9 @@ window#waybar {
 /* Battery Module */
 #battery {
   color: @green;
-  border-radius: 0;
   margin-right: 0px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -404,7 +406,8 @@ window#waybar {
   /* border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 8px; */
-  padding-right: 1.20rem;
+  padding-right: 1.20em;
+  padding-left: 1.20em;
 }
 
 /* =============================== */

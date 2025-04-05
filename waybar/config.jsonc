@@ -13,23 +13,25 @@
     "modules-left": [
         "custom/launcher",
 		"cpu",
+		"temperature",
 		"memory",
-        "hyprland/workspaces",
+        "hyprland/workspaces"
         // "cpu",
         // "memory",
         // "temperature",
         // "disk",
-		"custom/tomato"
+		//"custom/tomato"
     ],
     "modules-center": [
-        "clock",
+		"custom/playerctl",
+        "clock"
     ],
     "modules-right": [
         "network",
         "pulseaudio",
         "backlight",
         "battery",
-        "custom/notifications",
+        //"custom/notifications",
         "tray",
         // "custom/weather",
         // "custom/cycle_wall",
@@ -43,7 +45,7 @@
         "tooltip": true,
         "exec": "echo '{\"text\":\"🤔\",\"tooltip\":\"Drun | Run\"}'",
         "return-type": "json",
-        "on-click": "pkill fuzzel || sleep 0.15 && fuzzel",
+        "on-click": "pkill fuzzel || sleep 0.15 && fuzzel"
         // "on-click-right": "pkill tofi || sleep 0.15 && tofi-run -c ~/.config/tofi/tofi.launcher.conf",
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
@@ -51,10 +53,10 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-			"active": " ",
+			"active": " "
         },
 		"persistent-workspaces": {
-			"*": 4, // 5 workspaces by default on every monitor
+			"*": 4 // 4 workspaces by default on every monitor
 		},
 		"sort-by-number": true,
         "on-scroll-up": "hyprctl dispatch workspace e-1",
@@ -74,8 +76,8 @@
         "interval": 2
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+         "thermal-zone": 2,
+         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 40,
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
@@ -125,7 +127,7 @@
 		"exec": "tomato -t",
 		"interval": 1,
 		"tooltip": false,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'tomato'",
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'tomato'"
 	}, 
 	"custom/pomodoro": {
    		"exec": "i3-gnome-pomodoro status --format=waybar --show-seconds",
@@ -134,7 +136,7 @@
      	"format": "Pomodoro {}",
      	"on-click": "i3-gnome-pomodoro start",
      	"on-click-middle": "i3-gnome-pomodoro toggle",
-     	"on-click-right": "i3-gnome-pomodoro stop",
+     	"on-click-right": "i3-gnome-pomodoro stop"
  },
     "hyprland/window": {
         "format": "{}",
@@ -314,5 +316,15 @@
         "exec": "~/.scripts/tools/expand arrow-icon",
         "on-click": "~/.scripts/tools/expand_toolbar",
         "return-type": "json"
-    }
+    },
+	"custom/playerctl": {
+		"format": "{}",
+		"return-type": "json",
+		"max-length": 40,
+		"exec": "$HOME/dotfiles/scripts/playerctl.sh 2> /dev/null",
+		"on-click": "playerctl play-pause",
+		"on-right-click": "sys-notif media",
+		"on-scroll-up": "playerctl position 3+",
+		"on-scroll-down": "playerctl position 3-"
+	}
 }
