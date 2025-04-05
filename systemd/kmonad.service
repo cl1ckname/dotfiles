@@ -1,0 +1,11 @@
+[Unit]
+Description=clickname keyboard kmonad
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=kmonad /home/clickname/dotfiles/kmonad/homerow.kbd
+Restart=always
+
+[Install]
+WantedBy=default.target
