@@ -8,3 +8,4 @@ ln -sf "$(pwd)/systemd/kmonad.service" ~/.local/share/systemd/user/kmonad.servic
 ln -sf "$(pwd)/git" ~/.config/git
 ln -sf "$(pwd)/fish" ~/.config/fish
 ln -sf "$(pwd)/dunst" ~/.config/dunst
+ln -sf "$(pwd)/vifm" ~/.config/vifm
