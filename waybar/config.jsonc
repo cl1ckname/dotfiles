@@ -2,11 +2,11 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     //"gtk-layer-shell": "false",
-    //"height": 36, // Waybar height (to be removed for auto height)
+    // "height": 36, // Waybar height (to be removed for auto height)
     // "width": 2560, // Waybar width
     "spacing": 0, // Gaps between modules (0px) Adjusted in the css
     "margin-top": 0,
-    "margin-bottom":-10,
+    "margin-bottom":0,
     "margin-left": 10,
     "margin-right": 10,
     // Choose the order of the modules
@@ -15,15 +15,13 @@
 		"cpu",
 		"temperature",
 		"memory",
-        "hyprland/workspaces"
-        // "cpu",
-        // "memory",
-        // "temperature",
-        // "disk",
-		//"custom/tomato"
+        "hyprland/workspaces",
+        "sway/workspaces"
     ],
     "modules-center": [
+		"custom/music-prev",
 		"custom/playerctl",
+		"custom/music-next",
         "clock"
     ],
     "modules-right": [
@@ -31,14 +29,10 @@
         "pulseaudio",
         "backlight",
         "battery",
-        //"custom/notifications",
         "tray",
-        // "custom/weather",
-        // "custom/cycle_wall",
-        //"custom/clipboard",
 		"hyprland/language",
+		"sway/language",
         "custom/power"
-        // "custom/custom"
     ],
     "custom/launcher": {
         "format": "{}",
@@ -122,6 +116,16 @@
         "on-click-right": "amberol",
         "max-length": 35
     },
+	"custom/music-prev": {
+		"format": "⏮️",
+		"on-click": "playerctl previous",
+		"tooltip": false
+	},
+	"custom/music-next": {
+		"format": "⏭️",
+		"on-click": "playerctl next",
+		"tooltip": false
+	},
 	"custom/tomato": {
 		"format": "{}",
 		"exec": "tomato -t",

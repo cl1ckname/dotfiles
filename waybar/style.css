@@ -43,7 +43,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-family: 'JetBrains Nerd Font', monospace;
   font-size: 13px;
   min-height: 0;
 }
@@ -54,7 +54,7 @@
 /* =============================== */
 /* Bar Styling */
 #waybar {
-  background: transparent;
+  background: rgb(0,0,0);
   color: @text;
 }
 
@@ -79,6 +79,8 @@
 #disk,
 #temperature,
 #custom-music,
+#custom-music-next,
+#custom-music-prev,
 #custom-updates,
 #custom-nordvpn,
 #custom-notifications,
@@ -194,6 +196,25 @@ window#waybar {
   border-bottom-left-radius: 0;
   padding-left: 5px;
   padding-right: 1rem;
+}
+
+#custom-playerctl {
+  border-radius: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#custom-music-next {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#custom-music-prev {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 /* Updates Module */
