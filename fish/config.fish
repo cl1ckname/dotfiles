@@ -11,15 +11,20 @@ alias la='eza -a'
 alias ls='eza'
 alias tree='eza -T --level=5'
 
+alias ipa='ip a'
 alias pong='ping 8.8.8.8'
 alias down='shutdown now'
 alias minecraft='java -jar /home/clickname/Downloads/TLauncher-2.876.jar'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias iccat='kitten icat'
 alias refish='source ~/dotfiles/fish/config.fish'
-alias rewall='killall swaybg && ~/dotfiles/scripts/background.sh'
+alias rewall='killall swaybg || true && ~/dotfiles/scripts/background.sh'
 alias kssh='kitten ssh'
 alias nv='nvim'
+
+alias dekyt='nmcli con down kyt'
+alias wgp='nmcli con up machinima'
+alias dewgp='nmcli con down machinima'
 
 alias dcu='docker compose up -d'
 
