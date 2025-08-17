@@ -42,7 +42,7 @@ while true; do
 
 	# no current players
 	# exit if print fails
-	echo '<span foreground=#dc322f>⏹</span>' || break
+	echo '<span foreground=#dc322f>⏹ Loading...</span>' || break
 	sleep 15
 
 done

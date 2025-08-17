@@ -18,6 +18,7 @@ insteadOf = https://gitlab.opt.kyt/
 
 [alias]
     s = status
+	b = branch
     co = checkout
 	ps = push
 	pl = pull
