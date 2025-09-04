@@ -1,15 +1,11 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    //"gtk-layer-shell": "false",
-    // "height": 36, // Waybar height (to be removed for auto height)
-    // "width": 2560, // Waybar width
     "spacing": 0, // Gaps between modules (0px) Adjusted in the css
     "margin-top": 0,
     "margin-bottom":0,
     "margin-left": 10,
     "margin-right": 10,
-    // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
 		"cpu",
@@ -19,10 +15,9 @@
         "sway/workspaces"
     ],
     "modules-center": [
-		"custom/music-prev",
 		"custom/playerctl",
-		"custom/music-next",
-        "clock"
+		"custom/playerctl-next",
+		"clock"
     ],
     "modules-right": [
         "network",
@@ -32,7 +27,6 @@
         "tray",
 		"hyprland/language",
 		"sway/language",
-        "custom/power"
     ],
     "custom/launcher": {
         "format": "{}",
@@ -96,52 +90,7 @@
         "on-click": "~/.scripts/updates update",
         "interval": 600,
         "tooltip": true,
-        // "tooltip-format": "{}",
-        // "exec-tooltip": "~/.scripts/updates tooltip"
     },
-    "custom/music": {
-        "format": "{icon}{0}",
-        "format-icons": {
-            // "Playing": " ", // Uncomment if not using the dynamic script
-            "Paused": " ",
-            "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
-        },
-        "escape": true,
-        "tooltip": true,
-        "exec": "~/.scripts/caway -b 10 -e",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl previous",
-        "on-scroll-down": "playerctl next",
-        "on-click-right": "amberol",
-        "max-length": 35
-    },
-	"custom/music-prev": {
-		"format": "⏮️",
-		"on-click": "playerctl previous",
-		"tooltip": false
-	},
-	"custom/music-next": {
-		"format": "⏭️",
-		"on-click": "playerctl next",
-		"tooltip": false
-	},
-	"custom/tomato": {
-		"format": "{}",
-		"exec": "tomato -t",
-		"interval": 1,
-		"tooltip": false,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'tomato'"
-	}, 
-	"custom/pomodoro": {
-   		"exec": "i3-gnome-pomodoro status --format=waybar --show-seconds",
-     	"return-type": "json",
-     	"interval": 1,
-     	"format": "Pomodoro {}",
-     	"on-click": "i3-gnome-pomodoro start",
-     	"on-click-middle": "i3-gnome-pomodoro toggle",
-     	"on-click-right": "i3-gnome-pomodoro stop"
- },
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true,
@@ -255,10 +204,10 @@
         "spacing": 15
     },
     "clock": {
-        "timezone": "Russia/Moscow",
+        "timezone": "Europe/Moscow",
         "format": " {:%d <small>%a</small> %H:%M}",
         //"format": " {:%a %b %d %Y | %H:%M}",
-        "format-alt": " {:%A %B %d %Y (%V) | %r}",
+        "format-alt": " {:%A %B %d %Y (%V) | %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar-weeks-pos": "right",
         "today-format": "<span color='#f38ba8'><b><u>{}</u></b></span>",
@@ -323,12 +272,17 @@
     },
 	"custom/playerctl": {
 		"format": "{}",
-		"return-type": "json",
-		"max-length": 40,
-		"exec": "$HOME/dotfiles/scripts/playerctl.sh 2> /dev/null",
+		"max-length": 20,
+		"exec": "$HOME/dotfiles/scripts/playerctl2.sh 2> /dev/null",
 		"on-click": "playerctl play-pause",
 		"on-right-click": "sys-notif media",
 		"on-scroll-up": "playerctl position 3+",
 		"on-scroll-down": "playerctl position 3-"
+	},
+	"custom/playerctl-next": {
+		"format": "",
+		"on-click": "playerctl next",
+     	"on-click-right": "playerctl previous",
+		"tooltip": false
 	}
 }
