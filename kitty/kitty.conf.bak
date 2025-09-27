@@ -1,5 +1,5 @@
 # BEGIN_KITTY_THEME
-# neobones_dark
+# Kanagawa
 include current-theme.conf
 # END_KITTY_THEME
 enabled_layouts * 
@@ -8,11 +8,14 @@ map ctrl+shift+t new_tab_with_cwd
 map ctrl+shift+enter new_window_with_cwd
 map ctrl+shift+l next_tab
 map ctrl+shift+h previous_tab 
-map ctrl+shift+k next_layout 
+map ctrl+shift+m next_layout 
+map ctrl+shift+f toggle_fullscreen
+map ctrl+shift+j next_window
+map ctrl+shift+k previous_window
 
 disable_ligatures never
 
-font_family JetBrains Mono Regular
+font_family 	 JetBrains Mono Regular
 bold_font        JetBrains Mono Bold
 italic_font      JetBrains Mono Italic
 bold_italic_font JetBrains Mono Bold Italic
