@@ -10,6 +10,7 @@ alias ll='eza -l --icons --no-permissions --no-user -h -o'
 alias la='eza -a'
 alias ls='eza'
 alias tree='eza -T --level=5'
+alias cat='bat'
 
 alias ipa='ip a'
 alias pong='ping 8.8.8.8'
@@ -23,8 +24,8 @@ alias kssh='kitten ssh'
 alias nv='nvim'
 
 alias dekyt='nmcli con down kyt'
-alias wgp='nmcli con up machinima'
-alias dewgp='nmcli con down machinima'
+alias wgp='nmcli con up wgp'
+alias dewgp='nmcli con down wgp'
 
 alias dcu='docker compose up -d'
 
@@ -55,4 +56,5 @@ end
 set -gx PATH "$PATH:/home/clickname/.local/share/coursier/bin"
 # <<< coursier install directory <<<
 
+eval (ssh-agent -c)
 cdf shell fish | source
