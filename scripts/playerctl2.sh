@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-if playerctl status 2>/dev/null | grep -q "Playing"; then
+status=$(playerctl status 2>/dev/null | tr -d '\n' | tr -d ' ')
+if [[ "$status" == "Playing" ]]; then
     playerctl metadata title
 else
     echo "silence"
