@@ -9,3 +9,5 @@ ln -sf "$(pwd)/git" ~/.config/git
 ln -sf "$(pwd)/fish" ~/.config/fish
 ln -sf "$(pwd)/dunst" ~/.config/dunst
 ln -sf "$(pwd)/vifm" ~/.config/vifm
+ln -sf "$(pwd)/swaync" ~/.config/swaync
+ln -sf "$(pwd)/walker" ~/.config/walker
