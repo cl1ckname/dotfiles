@@ -43,24 +43,22 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: 'JetBrains Nerd Font', monospace;
-  font-size: 14px;
+  font-family: "JetBrains Nerd Font", monospace;
+  font-size: 12px;
   min-height: 0;
-  /* margin-bottom: 10px; */
+  /* margin-bottom: 2px; */
 }
 
 /* =============================== */
-
 
 /* =============================== */
 /* Bar Styling */
 #waybar {
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   color: @text;
 }
 
 /* =============================== */
-
 
 /* =============================== */
 /* Main Modules */
@@ -91,18 +89,20 @@
 #custom-pomodoro,
 #custom-playerctl,
 #custom-playerctl-next,
+#custom-wireguard,
+#custom-kmonad,
 #custom-weather {
   background-color: @surface0;
   color: @text;
   border-radius: 12px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.4rem 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
   margin-right: 10px;
   margin-top: 4px;
 }
 
 #language {
-	min-width: 8em;
+  min-width: 8em;
 }
 
 /* =============================== */
@@ -126,7 +126,7 @@ window#waybar {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 13px;
   transition-property: background-color;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 #workspaces button {
@@ -135,7 +135,6 @@ window#waybar {
   color: @green;
   font-size: 12px;
 }
-
 
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
@@ -150,9 +149,7 @@ window#waybar {
   background-color: #eb4d4b;
 }
 
-
 /* =============================== */
-
 
 /* =============================== */
 /* System Monitoring Modules */
@@ -214,7 +211,6 @@ window#waybar {
 
 /* =============================== */
 
-
 /* =============================== */
 /* Clock Module */
 #clock {
@@ -223,7 +219,6 @@ window#waybar {
 
 /* =============================== */
 
-
 /* =============================== */
 /* Network Module */
 #network {
@@ -231,11 +226,10 @@ window#waybar {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   margin-right: 0px;
-  padding-right: 5px;
+  padding-right: 0px;
 }
 
 /* =============================== */
-
 
 /* =============================== */
 /* PulseAudio Module */
@@ -249,7 +243,6 @@ window#waybar {
 
 /* =============================== */
 
-
 /* =============================== */
 /* Backlight Module */
 #backlight {
@@ -261,7 +254,6 @@ window#waybar {
 }
 
 /* =============================== */
-
 
 /* =============================== */
 /* Battery Module */
@@ -298,8 +290,7 @@ window#waybar {
 }
 
 #custom-tomato {
-	color: @red;
-	
+  color: @red;
 }
 
 /* =============================== */
@@ -313,7 +304,6 @@ window#waybar {
   padding-right: 1.25rem;
 }
 
-
 /* =============================== */
 /* Tray Module */
 #tray {
@@ -324,7 +314,6 @@ window#waybar {
 }
 
 /* =============================== */
-
 
 /* =============================== */
 /* |       Custom Modules        | */
@@ -343,7 +332,20 @@ window#waybar {
 
 /* Wallpaper */
 #custom-cycle_wall {
-  background: linear-gradient(45deg, rgba(245, 194, 231, 1) 0%, rgba(203, 166, 247, 1) 0%, rgba(243, 139, 168, 1) 13%, rgba(235, 160, 172, 1) 26%, rgba(250, 179, 135, 1) 34%, rgba(249, 226, 175, 1) 49%, rgba(166, 227, 161, 1) 65%, rgba(148, 226, 213, 1) 77%, rgba(137, 220, 235, 1) 82%, rgba(116, 199, 236, 1) 88%, rgba(137, 180, 250, 1) 95%);
+  background: linear-gradient(
+    45deg,
+    rgba(245, 194, 231, 1) 0%,
+    rgba(203, 166, 247, 1) 0%,
+    rgba(243, 139, 168, 1) 13%,
+    rgba(235, 160, 172, 1) 26%,
+    rgba(250, 179, 135, 1) 34%,
+    rgba(249, 226, 175, 1) 49%,
+    rgba(166, 227, 161, 1) 65%,
+    rgba(148, 226, 213, 1) 77%,
+    rgba(137, 220, 235, 1) 82%,
+    rgba(116, 199, 236, 1) 88%,
+    rgba(137, 180, 250, 1) 95%
+  );
   background-size: 500% 500%;
   animation: gradient 7s linear infinite;
 }
@@ -360,8 +362,38 @@ window#waybar {
 /* Powermenu Module */
 #custom-power {
   color: @mauve;
-  padding-right: 1.20em;
-  padding-left: 1.20em;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
+}
+
+#custom-wireguard {
+  /* padding: 0 10px; */
+  border-radius: 0;
+  margin: 0px;
+  /* padding-right: 0px; */
+}
+
+#custom-wireguard.active {
+  color: @green;
+}
+
+#custom-wireguard.inactive {
+  color: @rosewater;
+}
+
+#custom-kmonad {
+  /* padding: 0 10px; */
+  border-radius: 0;
+  margin: 0px;
+  /* padding-right: 0px; */
+}
+
+#custom-kmonad.running {
+  color: @green;
+}
+
+#custom-kmonad.stopped {
+  color: @rosewater;
 }
 
 /* =============================== */

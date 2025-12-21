@@ -12,7 +12,6 @@
     "temperature",
     "memory",
     "hyprland/workspaces",
-    "sway/workspaces",
   ],
   "modules-center": ["custom/playerctl", "custom/playerctl-next", "clock"],
   "modules-right": [
@@ -20,9 +19,10 @@
     "pulseaudio",
     "backlight",
     "battery",
+    "custom/kmonad",
+    "custom/wireguard",
     "tray",
     "hyprland/language",
-    "sway/language",
   ],
   "custom/launcher": {
     "format": "{}",
@@ -249,5 +249,20 @@
     "on-click": "playerctl next",
     "on-click-right": "playerctl previous",
     "tooltip": false,
+  },
+  "custom/wireguard": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "$HOME/dotfiles/scripts/wg-status.sh",
+    "on-click": "$HOME/dotfiles/scripts/wireguard-toggle.sh",
+    "interval": 3,
+  },
+  "custom/kmonad": {
+    "format": "{}",
+    "exec": "$HOME/dotfiles/scripts/toggle-kmonad.sh status",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "$HOME/dotfiles/scripts/toggle-kmonad.sh toggle",
+    "restart-interval": 1,
   },
 }
