@@ -22,6 +22,7 @@ alias refish='source ~/dotfiles/fish/config.fish'
 alias rewall='killall swaybg || true && ~/dotfiles/scripts/background.sh'
 alias kssh='kitten ssh'
 alias nv='nvim'
+alias ff='fastfetch'
 
 alias dekyt='nmcli con down kyt'
 alias wgp='nmcli con up wgp'
@@ -29,6 +30,9 @@ alias dewgp='nmcli con down wgp'
 
 alias dcu='docker compose up -d'
 
+function starship_transient_rprompt_func
+  starship module time
+end
 starship init fish | source
 enable_transience
 
@@ -36,7 +40,13 @@ fish_add_path ~/go/bin
 fish_add_path ~/.npm-packages/bin
 fish_add_path ~/.yarn/bin
 fish_add_path ~/.config/yarn/global/node_modules/.bin
-fish_add_path ~/.local/bin
+
+# set -Ux ANDROID_HOME /opt/android-sdk
+# fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin
+# fish_add_path $ANDROID_HOME/platform-tools
+# fish_add_path $ANDROID_HOME/tools
+# fish_add_path $ANDROID_HOME/tools/bin
+# fish_add_path $ANDROID_HOME/emulator
 
 set -gx EDITOR (type -p nvim)
 set -gx GOBIN ~/go/bin
