@@ -19,9 +19,13 @@ insteadOf = https://gitlab.opt.kyt/
 [alias]
     s = status
 	b = branch
+	f = fetch
     co = checkout
 	ps = push
 	pl = pull
+	rb = rebase
+	rc = rebase --continue
+	ra = rebase --abort
 	psf = push -f
 	cob = checkout -b
 	del = branch -D
