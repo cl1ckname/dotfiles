@@ -1,5 +1,7 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    if not set -q TMUX
+        exec tmux new-session
+    end
 end
 
 bind \cg accept-autosuggestion
@@ -19,10 +21,11 @@ alias minecraft='java -jar /home/clickname/Downloads/TLauncher-2.876.jar'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias iccat='kitten icat'
 alias refish='source ~/dotfiles/fish/config.fish'
-alias rewall='killall swaybg || true && ~/dotfiles/scripts/background.sh'
+alias rewall='~/dotfiles/scripts/background.sh'
 alias kssh='kitten ssh'
 alias nv='nvim'
 alias ff='fastfetch'
+alias copy='wl-copy'
 
 alias dekyt='nmcli con down kyt'
 alias wgp='nmcli con up wgp'
@@ -66,5 +69,11 @@ end
 set -gx PATH "$PATH:/home/clickname/.local/share/coursier/bin"
 # <<< coursier install directory <<<
 
-eval (ssh-agent -c)
+if not set -q SSH_AGENT_PID; or not kill -0 $SSH_AGENT_PID 2>/dev/null
+    eval (ssh-agent -c | head -n 2)
+end
 cdf shell fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

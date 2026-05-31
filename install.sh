@@ -12,3 +12,4 @@ ln -sf "$(pwd)/vifm" ~/.config/vifm
 ln -sf "$(pwd)/swaync" ~/.config/swaync
 ln -sf "$(pwd)/walker" ~/.config/walker
 ln -sf "$(pwd)/fastfetch" ~/.config/fastfetch
+ln -sf "$(pwd)/tmux" ~/.config/tmux
