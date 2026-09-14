@@ -38,3 +38,15 @@ insteadOf = https://gitlab.opt.kyt/
     l5 = log --oneline -5
 	untrack = rm --cached
 	unadd = restore --staged
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  
+
+[merge]
+    conflictStyle = zdiff3

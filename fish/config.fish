@@ -54,6 +54,7 @@ fish_add_path ~/.config/yarn/global/node_modules/.bin
 set -gx EDITOR (type -p nvim)
 set -gx GOBIN ~/go/bin
 set -gx NVM_DIR ~/.config/nvm
+set -gx Z3_EXE /usr/sbin/z3
 
 # For yazi integration
 function y
@@ -77,3 +78,16 @@ cdf shell fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/clickname/.local/bin" $PATH
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/home/clickname/.opam/opam-init/init.fish' && source '/home/clickname/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+# END opam configuration
