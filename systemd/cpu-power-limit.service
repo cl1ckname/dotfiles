@@ -1,0 +1,11 @@
+[Unit]
+Description=Set CPU package power limits via MSR
+After=systemd-modules-load.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/wrmsr -a 0x610 0x00C8820000DD8148
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

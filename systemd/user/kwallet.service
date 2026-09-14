@@ -1,0 +1,13 @@
+[Unit]
+Description=KWallet Secret Service Daemon
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.kde.kwalletd6
+ExecStart=/usr/bin/kwalletd6
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

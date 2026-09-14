@@ -1,0 +1,11 @@
+[Unit]
+Description=Flameshot screenshot tool
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=flameshot
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
