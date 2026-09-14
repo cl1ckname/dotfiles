@@ -1,0 +1,16 @@
+hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprland-per-window-layout")
+	hl.exec_cmd("~/dotfiles/scripts/background.sh")
+	hl.exec_cmd("~/kyt/connect.sh")
+
+	hl.exec_cmd("kitty --session toolbox.conf", { workspace = "special:toolbox" })
+	hl.exec_cmd("Telegram", { workspace = "special:graph" })
+	hl.exec_cmd('chromium --profile-directory="Profile 1"', { workspace = "special:magic" })
+	hl.exec_cmd('chromium --profile-directory="Default"', { workspace = "1" })
+	-- hl.exec_cmd("alacritty -o window.startup_mode=Fullscreen", { workspace = "2" })
+	hl.exec_cmd("kitty --start-as fullscreen", { workspace = "2" })
+
+	hl.timer(function()
+		hl.dispatch(hl.dsp.focus({ workspace = 1 }))
+	end, { timeout = 2000, type = "oneshot" })
+end)
