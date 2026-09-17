@@ -1,4 +1,11 @@
 palette = "catppuccin_macchiato"
+scan_timeout = 10000
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = '%H:%M'
+style = 'bold dimmed'
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
