@@ -1,0 +1,4 @@
+xkb_symbols "basic" {
+    include "/usr/share/xkeyboard-config-2/symbols/ru"
+    key <AE03> { [ 3, numbersign ] };
+};
