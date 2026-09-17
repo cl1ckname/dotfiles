@@ -1,3 +1,5 @@
+mkdir -p ~/.config
+ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml
 ln -sf "$(pwd)/nvim" ~/.config/nvim
 ln -sf "$(pwd)/hypr" ~/.config/hypr
 ln -sf "$(pwd)/kitty" ~/.config/kitty

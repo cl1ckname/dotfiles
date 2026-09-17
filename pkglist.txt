@@ -1,0 +1,15 @@
+git
+fish
+starship
+neovim
+kitty
+hyprland
+dunst
+fastfetch
+tmux
+eza
+yazi
+kmonad
+ripgrep
+tree-sitter-cli
+go
