@@ -7,7 +7,6 @@
   "margin-left": 10,
   "margin-right": 10,
   "modules-left": [
-    "custom/launcher",
     "cpu",
     "temperature",
     "memory",
@@ -238,7 +237,6 @@
     "format": "{}",
     "max-length": 20,
     "exec": "$HOME/dotfiles/scripts/playerctl2.sh 2> /dev/null",
-    "interval": 1,
     "on-click": "playerctl play-pause",
     "on-right-click": "sys-notif media",
     "on-scroll-up": "playerctl position 3+",
@@ -255,7 +253,6 @@
     "return-type": "json",
     "exec": "$HOME/dotfiles/scripts/wg-status.sh",
     "on-click": "$HOME/dotfiles/scripts/wireguard-toggle.sh",
-    "interval": 3,
   },
   "custom/kmonad": {
     "format": "{}",
