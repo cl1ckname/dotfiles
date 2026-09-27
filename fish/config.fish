@@ -1,6 +1,6 @@
 if status is-interactive
     if not set -q TMUX
-        exec tmux new-session
+        exec tmux -L term-$fish_pid new-session \; set -s exit-unattached on
     end
 end
 
