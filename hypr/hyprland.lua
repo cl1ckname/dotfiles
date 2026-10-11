@@ -7,7 +7,7 @@ require("binds")
 ---- MONITORS ----
 ------------------
 
-hl.monitor({ output = "eDP-1", mode = "highres@30", position = "auto-up", scale = "1.6" })
+hl.monitor({ output = "eDP-1", mode = "3120x2080@60", position = "auto-up", scale = "1.6" })
 hl.monitor({ output = "HDMI-A-1", mode = "3440x1440@99.99Hz", position = "auto-right", scale = "auto" })
 hl.monitor({ output = "DP-3", mode = "preferred", position = "auto-up", scale = "auto" })
 hl.monitor({ output = "DP-8", mode = "preferred", position = "auto-up", scale = "1.0" })
@@ -65,6 +65,8 @@ hl.config({
 		mouse_refocus = false,
 		float_switch_override_focus = 0,
 		sensitivity = 0,
+		repeat_delay = 200,
+		repeat_rate = 35,
 		touchpad = {
 			natural_scroll = true,
 		},

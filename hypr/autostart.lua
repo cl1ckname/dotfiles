@@ -9,6 +9,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd('chromium --profile-directory="Default"', { workspace = "1" })
 	-- hl.exec_cmd("alacritty -o window.startup_mode=Fullscreen", { workspace = "2" })
 	hl.exec_cmd("kitty --start-as fullscreen", { workspace = "2" })
+	hl.exec_cmd("hlactivate")
 
 	hl.timer(function()
 		hl.dispatch(hl.dsp.focus({ workspace = 1 }))
