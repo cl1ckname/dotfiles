@@ -87,7 +87,7 @@
 #custom-ss,
 #custom-tomato,
 #custom-pomodoro,
-#custom-playerctl,
+#mpris,
 #custom-playerctl-next,
 #custom-wireguard,
 #custom-kmonad,
@@ -191,7 +191,7 @@ window#waybar {
   padding-right: 1rem;
 }
 
-#custom-playerctl {
+#mpris {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   margin-right: 0px;

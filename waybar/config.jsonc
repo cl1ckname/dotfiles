@@ -12,7 +12,7 @@
     "memory",
     "hyprland/workspaces",
   ],
-  "modules-center": ["custom/playerctl", "custom/playerctl-next", "clock"],
+  "modules-center": ["mpris", "custom/playerctl-next", "clock"],
   "modules-right": [
     "network",
     "pulseaudio",
@@ -233,17 +233,17 @@
     "on-click": "~/.scripts/tools/expand_toolbar",
     "return-type": "json",
   },
-  "custom/playerctl": {
-    "format": "{}",
+  "mpris": {
+    "format": "{title}",
+    "format-paused": "silence",
+    "format-stopped": "silence",
+    "tooltip-format": "{player} ({status}): {artist} - {title}",
     "max-length": 20,
-    "exec": "$HOME/dotfiles/scripts/playerctl2.sh 2> /dev/null",
-    "on-click": "playerctl play-pause",
-    "on-right-click": "sys-notif media",
     "on-scroll-up": "playerctl position 3+",
     "on-scroll-down": "playerctl position 3-",
   },
   "custom/playerctl-next": {
-    "format": "",
+    "format": "󰒭",
     "on-click": "playerctl next",
     "on-click-right": "playerctl previous",
     "tooltip": false,
