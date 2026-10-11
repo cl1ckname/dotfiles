@@ -1,7 +1,7 @@
 #!/bin/bash
 
 get_status() {
-    if nmcli con show --active | grep -q "wgp"; then
+    if nmcli con show --active | grep -q "finf"; then
         echo '{"text": "", "class": "active"}'
     else
         echo '{"text": "", "class": "inactive"}'
