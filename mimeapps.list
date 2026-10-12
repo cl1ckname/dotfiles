@@ -1,0 +1,37 @@
+[Default Applications]
+application/yaml=org.kde.kate.desktop
+text/x-log=org.kde.kate.desktop
+image/png=org.gnome.Loupe.desktop
+image/jpeg=org.gnome.Loupe.desktop
+image/webp=org.gnome.Loupe.desktop
+application/x-zerosize=org.kde.kate.desktop
+x-scheme-handler/postman=Postman.desktop
+text/plain=org.kde.kate.desktop
+text/csv=libreoffice-calc.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+x-scheme-handler/jetbrains=jetbrainsd.desktop
+video/mpeg=vlc.desktop
+video/webm=vlc.desktop
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
+application/vnd.ms-publisher=org.kde.kate.desktop
+application/pdf=org.gnome.Evince.desktop
+x-scheme-handler/antigravity=antigravity.desktop
+
+[Added Associations]
+application/yaml=org.kde.kate.desktop;
+text/x-log=org.kde.kate.desktop;
+image/png=org.gnome.Loupe.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
+image/webp=org.gnome.Loupe.desktop;
+application/x-zerosize=org.kde.kate.desktop;
+text/plain=org.kde.kate.desktop;
+text/csv=libreoffice-calc.desktop;
+video/mpeg=vlc.desktop;
+video/webm=audacity.desktop;vlc.desktop;
+application/vnd.ms-publisher=org.kde.kate.desktop;
+application/pdf=okularApplication_pdf.desktop;
+x-scheme-handler/antigravity=antigravity.desktop;

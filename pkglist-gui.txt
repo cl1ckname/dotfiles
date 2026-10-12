@@ -1,0 +1,9 @@
+kitty
+hyprland
+dunst
+evince
+loupe
+nautilus
+vlc
+grim
+slurp

@@ -1,4 +1,5 @@
 mkdir -p ~/.config
+ln -sf "$(pwd)/mimeapps.list" ~/.config/mimeapps.list
 ln -sf "$(pwd)/starship.toml" ~/.config/starship.toml
 ln -sf "$(pwd)/nvim" ~/.config/nvim
 ln -sf "$(pwd)/hypr" ~/.config/hypr
@@ -15,3 +16,4 @@ ln -sf "$(pwd)/swaync" ~/.config/swaync
 ln -sf "$(pwd)/walker" ~/.config/walker
 ln -sf "$(pwd)/fastfetch" ~/.config/fastfetch
 ln -sf "$(pwd)/tmux" ~/.config/tmux
+ln -sf "$(pwd)/yazi" ~/.config/yazi
