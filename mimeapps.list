@@ -20,6 +20,7 @@ x-scheme-handler/unknown=chromium.desktop
 application/vnd.ms-publisher=org.kde.kate.desktop
 application/pdf=org.gnome.Evince.desktop
 x-scheme-handler/antigravity=antigravity.desktop
+x-scheme-handler/freshcraft=freshcraft.desktop
 
 [Added Associations]
 application/yaml=org.kde.kate.desktop;
