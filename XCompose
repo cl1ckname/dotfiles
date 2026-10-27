@@ -1,0 +1,91 @@
+# Custom compose sequences (symlinked to ~/.XCompose by install.sh).
+# Compose key = Menu (hyprland: compose:menu), emitted by kmonad on the Copilot key (F23).
+# Changes apply to newly started applications.
+
+include "%L"
+
+# --- Logic -------------------------------------------------------------
+<Multi_key> <a> <l>             : "∀"   # for All
+<Multi_key> <e> <x>             : "∃"   # EXists
+<Multi_key> <n> <e>             : "∄"   # Not Exists
+<Multi_key> <a> <n>             : "∧"   # ANd
+<Multi_key> <o> <r>             : "∨"   # OR
+<Multi_key> <n> <o>             : "¬"   # NOt
+<Multi_key> <x> <o>             : "⊕"   # XOr
+<Multi_key> <t> <o>             : "⊤"   # TOp
+<Multi_key> <b> <o>             : "⊥"   # BOttom
+<Multi_key> <t> <u>             : "⊢"   # TUrnstile
+<Multi_key> <e> <q>             : "≡"   # EQuivalent
+
+# --- Sets --------------------------------------------------------------
+<Multi_key> <i> <n>             : "∈"   # IN
+<Multi_key> <n> <i>             : "∉"   # Not In
+<Multi_key> <c> <a>             : "∩"   # CAp
+<Multi_key> <c> <u>             : "∪"   # CUp
+<Multi_key> <s> <b>             : "⊂"   # SuBset
+<Multi_key> <s> <e>             : "⊆"   # Subset or Equal
+<Multi_key> <s> <p>             : "⊃"   # SuPerset
+<Multi_key> <s> <q>             : "⊇"   # Superset or eQual
+<Multi_key> <e> <s>             : "∅"   # Empty Set
+
+# --- Functions / arrows ------------------------------------------------
+<Multi_key> <c> <i>             : "∘"   # CIrc (composition)
+<Multi_key> <m> <t>             : "↦"   # Maps To
+<Multi_key> <l> <a>             : "←"   # Left Arrow
+<Multi_key> <r> <a>             : "→"   # Right Arrow
+<Multi_key> <u> <a>             : "↑"   # Up Arrow
+<Multi_key> <d> <a>             : "↓"   # Down Arrow
+<Multi_key> <l> <r>             : "↔"   # Left-Right
+<Multi_key> <i> <m>             : "⇒"   # IMplies
+<Multi_key> <i> <f>             : "⇔"   # IFf
+
+# --- Analysis / algebra ------------------------------------------------
+<Multi_key> <s> <u>             : "∑"   # SUm
+<Multi_key> <p> <r>             : "∏"   # PRoduct
+<Multi_key> <i> <t>             : "∫"   # InTegral
+<Multi_key> <p> <d>             : "∂"   # Partial D
+<Multi_key> <n> <a>             : "∇"   # NAbla
+<Multi_key> <i> <i>             : "∞"   # InfInity
+<Multi_key> <s> <r>             : "√"   # Square Root
+<Multi_key> <a> <p>             : "≈"   # APprox
+<Multi_key> <n> <q>             : "≠"   # Not eQual
+<Multi_key> <p> <m>             : "±"   # Plus Minus
+<Multi_key> <t> <i>             : "×"   # TImes
+<Multi_key> <c> <d>             : "·"   # Center Dot
+<Multi_key> <o> <t>             : "⊗"   # Otimes
+
+# --- Greek: g + latin letter ------------------------------------------
+<Multi_key> <g> <a>             : "α"
+<Multi_key> <g> <b>             : "β"
+<Multi_key> <g> <g>             : "γ"
+<Multi_key> <g> <d>             : "δ"
+<Multi_key> <g> <e>             : "ε"
+<Multi_key> <g> <z>             : "ζ"
+<Multi_key> <g> <h>             : "η"
+<Multi_key> <g> <q>             : "θ"
+<Multi_key> <g> <i>             : "ι"
+<Multi_key> <g> <k>             : "κ"
+<Multi_key> <g> <l>             : "λ"
+<Multi_key> <g> <m>             : "μ"
+<Multi_key> <g> <n>             : "ν"
+<Multi_key> <g> <x>             : "ξ"
+<Multi_key> <g> <o>             : "ο"
+<Multi_key> <g> <p>             : "π"
+<Multi_key> <g> <r>             : "ρ"
+<Multi_key> <g> <s>             : "σ"
+<Multi_key> <g> <t>             : "τ"
+<Multi_key> <g> <u>             : "υ"
+<Multi_key> <g> <f>             : "φ"
+<Multi_key> <g> <c>             : "χ"
+<Multi_key> <g> <y>             : "ψ"
+<Multi_key> <g> <w>             : "ω"
+<Multi_key> <g> <G>             : "Γ"
+<Multi_key> <g> <D>             : "Δ"
+<Multi_key> <g> <Q>             : "Θ"
+<Multi_key> <g> <L>             : "Λ"
+<Multi_key> <g> <X>             : "Ξ"
+<Multi_key> <g> <P>             : "Π"
+<Multi_key> <g> <S>             : "Σ"
+<Multi_key> <g> <F>             : "Φ"
+<Multi_key> <g> <Y>             : "Ψ"
+<Multi_key> <g> <W>             : "Ω"
