@@ -42,6 +42,7 @@ enable_transience
 fish_add_path ~/go/bin
 fish_add_path ~/.npm-packages/bin
 fish_add_path ~/.yarn/bin
+fish_add_path ~/.cargo/bin
 fish_add_path ~/.config/yarn/global/node_modules/.bin
 
 # set -Ux ANDROID_HOME /opt/android-sdk
