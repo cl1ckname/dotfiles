@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = "Z"
+run  = "plugin fzf-dir"
+desc = "Jump to a directory via fzf"

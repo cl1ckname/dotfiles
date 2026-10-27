@@ -11,3 +11,8 @@ function Linemode:size_and_mtime()
 	local size = self._file:size()
 	return ui.Line(string.format("%s %s", time, size and ya.readable_size(size) or "-"))
 end
+
+require("git"):setup({
+	-- Order of status signs showing in the linemode
+	order = 1500,
+})
