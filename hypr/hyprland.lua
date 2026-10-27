@@ -59,7 +59,7 @@ hl.config({
 		kb_layout = "us, myru",
 		kb_variant = ", basic",
 		kb_model = "",
-		kb_options = "grp:caps_toggle",
+		kb_options = "grp:caps_toggle,compose:menu",
 		kb_rules = "",
 		follow_mouse = 1,
 		mouse_refocus = false,

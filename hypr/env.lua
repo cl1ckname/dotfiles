@@ -6,5 +6,6 @@ hl.env("GTK_USE_PORTAL",              "1")
 hl.env("XCURSOR_THEME",               "Quintom_Ink")
 hl.env("XCURSOR_SIZE",                "20")
 hl.env("QT_QPA_PLATFORM",             "wayland")
-hl.env("QT_QPA_PLATFORMTHEME",        "qt6ct")
+-- Use the configured FileChooser portal for both Qt 5 and Qt 6.
+hl.env("QT_QPA_PLATFORMTHEME",        "xdgdesktopportal")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT","wayland")
